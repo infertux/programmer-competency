@@ -1,0 +1,195 @@
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #eaeaea url('bg.png');
+    color: #4d4d4d;
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #777;
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+}
+
+#instructions {
+    text-align: center;
+}
+
+#app {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px 0 80px 0;
+    border: 1px solid #ccc;
+    position: relative;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+                0 25px 50px 0 rgba(0, 0, 0, 0.15);
+    padding-top: 15px;
+    border-radius: inherit;
+}
+
+#app:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 15px;
+    z-index: 2;
+    border-bottom: 1px solid #6c615c;
+    background: #8d7d77;
+    background: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: -moz-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: -o-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: -ms-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+#title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-variant: small-caps;
+    padding: 0 8px;
+}
+
+#item {
+    position: relative;
+    z-index: 2;
+    border-top: 1px dotted #adadad;
+}
+
+#levels li:before {
+    content: '✔';
+    font-size: 20px;
+    color: #0e0;
+    text-shadow: 0 -1px 0 #444;
+}
+
+#levels li:hover ~ li {
+    background: #fcc;
+}
+
+#levels li:hover ~ li:before { /* what a sweet selector :) */
+    color: #e00;
+    content: '✘';
+}
+
+#levels {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#levels li {
+    cursor: pointer;
+    border-bottom: 1px dotted #ccc;
+    padding: 8px;
+}
+
+#levels li:last-child {
+    border-bottom: none;
+}
+
+#matrix {
+    text-align: center;
+}
+
+#table {
+    margin: 40px 0;
+}
+
+#table th:not(:first-child) {
+    border-width: 0 0 0 1px;
+    border-color: #aaa;
+    border-style: dotted;
+    padding: 4px;
+}
+
+#table td {
+    border-width: 1px 0 0 1px;
+    border-color: #aaa;
+    border-style: dotted;
+    padding: 4px;
+    text-align: left;
+}
+
+#table td:not(.item):hover {
+    background: #f0f0f0;
+}
+
+#table td:first-child {
+    font-weight: bold;
+    border-width: 1px 0 0 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-variant: small-caps;
+}
+
+#table td.dunno {
+  color: #e00;
+}
+
+#footer {
+    color: #777;
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    bottom: -31px;
+    left: 0;
+    height: 20px;
+    z-index: 1;
+    text-align: center;
+}
+
+#footer:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 31px;
+    left: 0;
+    height: 50px;
+    z-index: -1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+                0 6px 0 -3px rgba(255, 255, 255, 0.8),
+                0 7px 1px -3px rgba(0, 0, 0, 0.3),
+                0 43px 0 -6px rgba(255, 255, 255, 0.8),
+                0 44px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+#info {
+    margin: 20px auto;
+    color: #a6a6a6;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+#info a {
+    color: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
